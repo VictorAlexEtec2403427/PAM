@@ -1,4 +1,7 @@
-Fazer um sistema de input a partir de uma das telas, da lib. @react-navigation/native e @react-navigation/bottom-tabs.
+Fazer um sistema de input a partir de uma das telas, da lib. 
+
+- @react-navigation/native e 
+- @react-navigation/bottom-tabs.
 
 Novo layout utilizando as libs
 - react-native-gesture-handler
