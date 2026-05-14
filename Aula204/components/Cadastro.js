@@ -11,6 +11,7 @@ function cadastrarAluno(){
         <View style={styles.container2}>
 
             <Text style={styles.titulo}>Cadastro de Alunos</Text>
+
             <Text style={styles.paragrafo}>Digite o nome:</Text>
             <TextInput
                 style={styles.input}
@@ -18,6 +19,19 @@ function cadastrarAluno(){
                 onChangeText={setNome}
             />
 
+            <Text style={styles.paragrafo}>Digite o curso:</Text>
+            <TextInput
+                style={styles.input}
+                value={curso}
+                onChangeText={setCurso}
+            />
+
+            <Text style={styles.paragrafo}>Digite o idade:</Text>
+            <TextInput
+                style={styles.input}
+                value={idade}
+                onChangeText={setIdade}
+            />
         </View>
     )
 }
