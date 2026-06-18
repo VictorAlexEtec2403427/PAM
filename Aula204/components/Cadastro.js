@@ -17,6 +17,14 @@ export default function Cadastro( {alunos, setAlunos} ){
         };
 
         setAlunos([...alunos, novoAluno]);
+
+        setNome('');
+        setCurso('');
+        setIdade('');
+
+        alert('Cadastro', 'Aluno cadastrado !');
+
+        setMensagem("O aluno" + nome + " foi cadastrado !")
     }
 
     return(
