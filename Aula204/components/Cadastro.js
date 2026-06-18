@@ -5,8 +5,20 @@ import styles from './estilos';
 const [nome, setNome] = useState("");
 const [curso, setCurso] = useState("");
 const [idade, setIdade] = useState("");
+const [mensagem, setMensagem] = useState("Testando... ")
 
-function cadastrarAluno(){
+export default function Cadastro( {alunos, setAlunos} ){
+
+    function cadastrarAluno(){
+        const novoAluno = {
+            nome: nome,
+            curso: curso,
+            idade: idade,
+        };
+
+        setAlunos([...alunos, novoAluno]);
+    }
+
     return(
         <View style={styles.container2}>
 
@@ -32,14 +44,14 @@ function cadastrarAluno(){
                 value={idade}
                 onChangeText={setIdade}
             />
-        </View>
-    )
-}
 
-export default function Cadastro( {alunos, setAlunos} ){
-    return(
-        <View>
-            <TextInput placeholder='Digite seu nome'/>
+            <TouchableOpacity style={styles.botao} onPress={cadastrarAluno}>
+                <Text style={styles.botaoTexto}>Cadastrar</Text>
+            </TouchableOpacity>
+
+            <Text style={styles.mensagem}>
+                {mensagem}
+            </Text>
         </View>
     )
 }

@@ -13,8 +13,10 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator>
         <Drawer.Screen name="Home" component={HomeScreen}/>
-        <Drawer.Screen name="Cadastro" component={Cadastro}/>
-        <Drawer.Screen name="Lista" />
+        <Drawer.Screen name="Cadastro"/>
+        {() => <Cadastro alunos={alunos} setAlunos={setAlunos}/>}
+
+        <Drawer.Screen name="Lista" component={HomeScreen}/>
       </Drawer.Navigator>
     </NavigationContainer>
   );
